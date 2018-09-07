@@ -1,7 +1,7 @@
 console.disableYellowBox = true;
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { createTabNavigator, createStackNavigator } from 'react-navigation'
 
 import api from './lib/api'
@@ -35,13 +35,25 @@ const Tabs = createTabNavigator( {
       }
     } ),
     navigationOptions: {
-      title: 'Movies'
+      title: 'Movies',
+      tabBarIcon: ( { tintColor } ) => {
+        return <Image
+          style={ [ styles.icon, { tintColor } ] }
+          source={ require( './images/home.png' ) }
+        />;
+      }
     }
   },
   About: {
     screen: AboutScreen,
     navigationOptions: {
-      title: 'About'
+      title: 'About',
+      tabBarIcon: ( { tintColor } ) => {
+        return <Image
+          style={ [ styles.icon, { tintColor } ] }
+          source={ require( './images/about.png' ) }
+        />;
+      }
     }
   }
 } )
@@ -63,4 +75,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  icon: {
+    width: 25,
+    height: 25
+  }
 });
