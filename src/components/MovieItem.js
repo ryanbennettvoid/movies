@@ -50,8 +50,7 @@ const styles = StyleSheet.create( {
     position: 'absolute',
     width: itemWidth,
     height: itemHeight,
-    justifyContent: 'center',
-    alignItems: 'center'
+    padding: 20
   },
 
   title: {
