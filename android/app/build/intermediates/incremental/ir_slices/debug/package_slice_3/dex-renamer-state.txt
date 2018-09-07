@@ -1,0 +1,4 @@
+#Thu Sep 06 20:21:52 PDT 2018
+base.0=/home/ryan/projects/js/movies/android/app/build/intermediates/transforms/dexMerger/debug/4
+path.0=classes.dex
+renamed.0=classes.dex
